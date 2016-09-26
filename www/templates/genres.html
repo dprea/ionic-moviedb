@@ -1,0 +1,10 @@
+<ion-view view-title="Genres">
+  <ion-content>
+    <ion-list>
+      <!-- "#/app/genres/{{genre.id}}" -->
+      <ion-item ng-repeat="genre in vm.genres" ui-sref="app.genre({genreId: genre.id, genreName: genre.name})">
+        {{genre.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+<ion-view view-title="Genre">
+  <ion-content>
+    <h1 ng-bind="vm.genreName"></h1>
+    <ul class="list">
+      <li class="item item-thumbnail-left" ng-repeat="movie in vm.movies">
+        <img ng-src="{{'https://image.tmdb.org/t/p/w500_and_h281_bestv2' + movie.poster_path}}" />
+        <span ng-bind="movie.title"></span>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

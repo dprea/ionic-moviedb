@@ -1,0 +1,13 @@
+{
+  "name": "MovieDB",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "replace",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
