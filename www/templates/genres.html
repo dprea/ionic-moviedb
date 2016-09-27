@@ -1,9 +1,9 @@
 <ion-view view-title="Genres">
   <ion-content>
+    <mdb-page-header text="'Genres'"></mdb-page-header>
     <ion-list>
-      <!-- "#/app/genres/{{genre.id}}" -->
       <ion-item ng-repeat="genre in vm.genres" ui-sref="app.genre({genreId: genre.id, genreName: genre.name})">
-        {{genre.name}}
+        <span ng-bind="genre.name"></span>
       </ion-item>
     </ion-list>
   </ion-content>

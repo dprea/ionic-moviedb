@@ -40,7 +40,6 @@ angular.module('moviedb.controllers', [])
     }, 1000);
   };
 })
-
 .controller('GenresCtrl', function($scope, $http, apiKey) {
   var vm = this;
   vm.genres = [];
@@ -64,7 +63,6 @@ angular.module('moviedb.controllers', [])
     });
   }
 })
-
 .controller('GenreCtrl', function($scope, $stateParams, $http, apiKey) {
   var vm = this;
   vm.movies = [];
@@ -87,4 +85,12 @@ angular.module('moviedb.controllers', [])
       console.log('Get Genres Error! ', res);
     });
   }
+})
+.directive('mdbPageHeader', function() {
+  return {
+    scope: {
+      text: '=text'
+    },
+    template: '<h1 ng-bind="text"></h1>'
+  };
 });
